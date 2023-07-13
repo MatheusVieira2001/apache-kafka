@@ -1,6 +1,6 @@
 server:
-  port: 8000
+  port: 8100
 spring:
   kafka:
-   producer:
+   consumer:
     bootstrap-servers: localhost:29092
