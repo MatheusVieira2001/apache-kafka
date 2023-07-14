@@ -18,9 +18,13 @@ public @interface StrConsumerCustomListener {
 	
 	@AliasFor(annotation = KafkaListener.class, attribute = "containerFactory")
 	String containerFactory() default "strContainerFactory";
-	
+
 	@AliasFor(annotation = KafkaListener.class, attribute = "groupId")
 	String groupId() default "";
+
+	@AliasFor(annotation = KafkaListener.class, attribute = "errorHandler")
+	String errorHandler() default "errorCustomHandler";
+
 	
 	/*
 	 * GRUPOS DE CONSUMOS DIFERENTES PODEM processar A MENSAGEM IGUALMENTE (DEPENDENTE DAS PARTIÇÕES)!

@@ -13,6 +13,7 @@ public class StrConsumerListener {
 	@StrConsumerCustomListener(groupId = "group-1")
 	public void listener(String message) {
 		log.info("LISTENER ::: Mensagem recebida {}",message);
+		throw new IllegalArgumentException("EXCEPTION...");
 	}
 	
 	@StrConsumerCustomListener(groupId = "group-1")
