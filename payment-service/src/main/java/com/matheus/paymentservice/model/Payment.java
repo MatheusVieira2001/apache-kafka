@@ -12,4 +12,11 @@ public class Payment implements Serializable {
     private Long idProduct;
     private String cardNumber;
 
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "idUser=" + idUser +
+                ", idProduct=" + idProduct +
+                '}';
+    }
 }
